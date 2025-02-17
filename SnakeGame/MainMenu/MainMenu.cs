@@ -14,7 +14,6 @@ namespace SnakeGame.MainMenu
         Size defaultSize = new Size(720, 480);
 
         PictureBox logo = new PictureBox();
-        Image logoImage = Image.FromFile(Application.StartupPath + "/MainMenu/logo.png");
 
         Stats stats = new Stats();
 
@@ -121,7 +120,7 @@ namespace SnakeGame.MainMenu
 
             e.Graphics.InterpolationMode = InterpolationMode.NearestNeighbor;
             e.Graphics.PixelOffsetMode = PixelOffsetMode.None;
-            e.Graphics.DrawImage(logoImage, new Rectangle(0, 0, logo.Width, logo.Height));
+            e.Graphics.DrawImage(Resources.Logo, new Rectangle(0, 0, logo.Width, logo.Height));
         }
     }
 }
