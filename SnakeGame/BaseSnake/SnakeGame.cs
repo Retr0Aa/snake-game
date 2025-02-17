@@ -112,7 +112,7 @@ namespace SnakeGame.BaseSnake
                 }
             }
 
-            snake.Draw(g, GridSize);
+            snake.Draw(g, GridSize, stats.CurrentSkin);
             food.Draw(g, GridSize);
 
             Font drawFont = new Font("Arial", 10);

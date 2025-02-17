@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SnakeGame.MainMenu;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -57,11 +58,11 @@ namespace SnakeGame.BaseSnake
             body.Add(body[body.Count - 1]);
         }
 
-        public void Draw(Graphics g, int gridSize)
+        public void Draw(Graphics g, int gridSize, string skin)
         {
             foreach (Point p in body)
             {
-                g.FillRectangle(Brushes.Green, p.X * gridSize, p.Y * gridSize, gridSize, gridSize);
+                g.FillRectangle(new SolidBrush(SkinsManager.GetSkinColor(skin)), p.X * gridSize, p.Y * gridSize, gridSize, gridSize);
             }
         }
     }

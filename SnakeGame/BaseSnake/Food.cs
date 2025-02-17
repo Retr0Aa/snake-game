@@ -34,6 +34,12 @@ namespace SnakeGame.BaseSnake
         public void Draw(Graphics g, int gridSize)
         {
             g.FillRectangle(Brushes.Red, position.X * gridSize, position.Y * gridSize, gridSize, gridSize);
+
+            g.DrawLine(new Pen(Brushes.Green, 2),
+                position.X * gridSize + gridSize / 2,
+                position.Y * gridSize,
+                position.X * gridSize + gridSize,
+                position.Y * gridSize - gridSize * 0.5f);
         }
     }
 }
